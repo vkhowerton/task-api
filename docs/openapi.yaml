@@ -15,9 +15,16 @@ tags:
 paths:
   /tasks:
     get:
-      summary: List all tasks
+      summary: TEST CHANGE
       tags:
         - Tasks
+      parameters:
+        - in: query
+          name: completed
+          schema:
+            type: boolean
+          required: false
+          description: Filter tasks by completion status (true or false)
       responses:
         '200':
           description: OK
@@ -27,6 +34,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Task'
+        '400':
+          description: Invalid query parameter
     post:
       summary: Create a new task
       tags:
