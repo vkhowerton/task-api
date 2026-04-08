@@ -23,7 +23,6 @@ paths:
           name: completed
           schema:
             type: string
-            enum: ["true", "false"]
           required: false
           description: Filter tasks by completion status (true or false)
       responses:
