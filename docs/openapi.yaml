@@ -23,6 +23,7 @@ paths:
           name: completed
           schema:
             type: string
+            example: true
           required: false
           description: Filter tasks by completion status (true or false)
       responses:
